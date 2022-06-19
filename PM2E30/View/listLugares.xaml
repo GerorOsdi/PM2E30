@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Conver="clr-namespace:PM2E30.Conver"
+             x:Class="PM2E30.View.listLugares">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Conver:ByteForImage x:Key="ByteToImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="lstPlaces" SelectionMode="Single" SelectionChanged="lstPlaces_SelectionChanged" Scrolled="OnCollectionViewScrolled">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding id}" Padding="5,0,5,0"/>
+                            <Image Source="{Binding foto,Converter={StaticResource ByteToImage}}" WidthRequest="100" HeightRequest="100" 
+                                   BackgroundColor="AliceBlue" HorizontalOptions="Start"/>
+                            <Label Text="{Binding desc}" Padding="5,0,5,0"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

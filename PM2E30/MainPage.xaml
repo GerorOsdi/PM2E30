@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2E30.MainPage">
+    
+
+    <StackLayout>
+        <Image x:Name="viewPlace" BackgroundColor="#7EAE85" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" Margin="20,20,0,0"/>
+        <Button Text="Photo" x:Name="btnPhoto" Clicked="btnPhoto_Clicked" BackgroundColor="#805E18" TextColor="White" HorizontalOptions="Center"/>
+
+        <Label Text="Latitude" TextColor="Blue" FontSize="14" Padding="10,0,10,0"/>
+        <Entry x:Name="txtLatitude" IsEnabled="False" Text="" />
+
+        <Label Text="Longitud" TextColor="Blue" FontSize="14" Padding="10,0,10,0"/>
+        <Entry x:Name="txtLongitud" IsEnabled="False" Text="" />
+
+        <Label Text="Descripcion" TextColor="Blue" FontSize="14" Padding="10,0,10,0"/>
+        <Entry x:Name="txtDesc" Text="" />
+
+        <Button Text="Add" x:Name="btnSave" Clicked="btnSave_Clicked" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center"/>
+        <Button Text="Lugares" x:Name="btnLista" Clicked="btnLista_Clicked" BackgroundColor="Black" TextColor="White" HorizontalOptions="Center"/>
+
+    </StackLayout>
+
+</ContentPage>
